@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Para Joss</title>
+  <meta name="description" content="Un lugar que existe solo para ti.">
+  <meta name="theme-color" content="#FFD3A5">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Great+Vibes&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-view="inicio" class="on-cover">
+
+  <!-- Símbolo reutilizable: una flor amarilla -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="flor" viewBox="0 0 64 64">
+        <g fill="#F2B84B">
+          <ellipse cx="32" cy="12.5" rx="6.5" ry="11.5" transform="rotate(22.5 32 32)"/>
+          <ellipse cx="32" cy="12.5" rx="6.5" ry="11.5" transform="rotate(67.5 32 32)"/>
+          <ellipse cx="32" cy="12.5" rx="6.5" ry="11.5" transform="rotate(112.5 32 32)"/>
+          <ellipse cx="32" cy="12.5" rx="6.5" ry="11.5" transform="rotate(157.5 32 32)"/>
+          <ellipse cx="32" cy="12.5" rx="6.5" ry="11.5" transform="rotate(202.5 32 32)"/>
+          <ellipse cx="32" cy="12.5" rx="6.5" ry="11.5" transform="rotate(247.5 32 32)"/>
+          <ellipse cx="32" cy="12.5" rx="6.5" ry="11.5" transform="rotate(292.5 32 32)"/>
+          <ellipse cx="32" cy="12.5" rx="6.5" ry="11.5" transform="rotate(337.5 32 32)"/>
+        </g>
+        <g fill="#FFC93C">
+          <ellipse cx="32" cy="12" rx="6.5" ry="12"/>
+          <ellipse cx="32" cy="12" rx="6.5" ry="12" transform="rotate(45 32 32)"/>
+          <ellipse cx="32" cy="12" rx="6.5" ry="12" transform="rotate(90 32 32)"/>
+          <ellipse cx="32" cy="12" rx="6.5" ry="12" transform="rotate(135 32 32)"/>
+          <ellipse cx="32" cy="12" rx="6.5" ry="12" transform="rotate(180 32 32)"/>
+          <ellipse cx="32" cy="12" rx="6.5" ry="12" transform="rotate(225 32 32)"/>
+          <ellipse cx="32" cy="12" rx="6.5" ry="12" transform="rotate(270 32 32)"/>
+          <ellipse cx="32" cy="12" rx="6.5" ry="12" transform="rotate(315 32 32)"/>
+        </g>
+        <circle cx="32" cy="32" r="9.5" fill="#6B4423"/>
+        <circle cx="29.5" cy="29.5" r="3.5" fill="#8A5A2B" opacity=".8"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <!-- Fondo: campo de flores animado (persiste en todas las secciones) -->
+  <canvas id="field" aria-hidden="true"></canvas>
+  <div class="veil" aria-hidden="true"></div>
+
+  <!-- Navegación -->
+  <header class="nav" id="nav">
+    <a class="nav__brand" href="#inicio" aria-label="Ir al inicio">
+      <svg class="nav__flor" aria-hidden="true"><use href="#flor"/></svg>
+      <span class="nav__brand-text">Para Joss</span>
+    </a>
+    <nav class="nav__links" aria-label="Secciones del sitio">
+      <a href="#inicio" data-route="inicio">Inicio</a>
+      <a href="#historia" data-route="historia">Nuestra historia</a>
+      <a href="#recuerdos" data-route="recuerdos">Recuerdos</a>
+      <a href="#razones" data-route="razones">Razones</a>
+      <a href="#carta" data-route="carta">Carta</a>
+    </nav>
+    <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú">
+      <span class="nav__toggle-bar"></span>
+    </button>
+  </header>
+
+  <!-- Menú móvil (pétalos) -->
+  <div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Menú">
+    <span class="menu__petal menu__petal--1" aria-hidden="true"></span>
+    <span class="menu__petal menu__petal--2" aria-hidden="true"></span>
+    <span class="menu__petal menu__petal--3" aria-hidden="true"></span>
+    <span class="menu__petal menu__petal--4" aria-hidden="true"></span>
+    <ul class="menu__list">
+      <li><a href="#inicio" data-route="inicio"><small>Portada</small>Inicio</a></li>
+      <li><a href="#historia" data-route="historia"><small>Capítulo 01</small>Nuestra historia</a></li>
+      <li><a href="#recuerdos" data-route="recuerdos"><small>Capítulo 02</small>Recuerdos</a></li>
+      <li><a href="#razones" data-route="razones"><small>Capítulo 03</small>Razones</a></li>
+      <li><a href="#carta" data-route="carta"><small>Capítulo 04</small>Carta para ti</a></li>
+    </ul>
+  </div>
+
+  <main id="main">
+
+    <!-- PORTADA -->
+    <section class="view view--cover" data-view="inicio" aria-label="Portada">
+      <div class="cover__inner">
+        <p class="cover__overline cover__anim" style="--d:.9s" data-copy="portada.overline">Un lugar que existe solo para ti</p>
+        <h1 class="cover__title cover__anim" style="--d:1.25s" data-copy="portada.titulo">Para Joss</h1>
+        <p class="cover__subtitle cover__anim" style="--d:1.7s" data-copy="portada.subtitulo">Un campo de flores amarillas, sembrado con recuerdos.</p>
+        <a class="btn cover__anim" style="--d:2.05s" href="#historia" data-copy="portada.boton">Entrar</a>
+      </div>
+      <a class="cover__hint cover__anim" style="--d:2.8s" href="#historia" aria-label="Desliza para entrar">
+        <span class="cover__hint-text">desliza</span>
+        <span class="cover__hint-arrow" aria-hidden="true"></span>
+      </a>
+    </section>
+
+    <!-- CAPÍTULO 01 · NUESTRA HISTORIA -->
+    <section class="view view--inner" data-view="historia" hidden aria-labelledby="t-historia">
+      <header class="chapter">
+        <p class="chapter__num" data-copy="capitulos.historia.num">Capítulo 01</p>
+        <h2 class="chapter__title" id="t-historia" data-copy="capitulos.historia.titulo">Nuestra historia</h2>
+        <p class="chapter__lead" data-copy="capitulos.historia.sub">Los momentos que nos trajeron hasta aquí, en orden, como los vivimos.</p>
+      </header>
+      <div class="chapter__body" id="historia-body">
+        <div class="placeholder">
+          <svg class="placeholder__flor" aria-hidden="true"><use href="#flor"/></svg>
+          <p class="placeholder__title">Este capítulo se está escribiendo</p>
+          <p class="placeholder__text">Aquí va a vivir la línea de tiempo: cada momento con su fecha, su foto y una frase.</p>
+        </div>
+      </div>
+      <a class="view__next" href="#recuerdos"><small>Siguiente capítulo</small>Recuerdos</a>
+    </section>
+
+    <!-- CAPÍTULO 02 · RECUERDOS -->
+    <section class="view view--inner" data-view="recuerdos" hidden aria-labelledby="t-recuerdos">
+      <header class="chapter">
+        <p class="chapter__num" data-copy="capitulos.recuerdos.num">Capítulo 02</p>
+        <h2 class="chapter__title" id="t-recuerdos" data-copy="capitulos.recuerdos.titulo">Recuerdos</h2>
+        <p class="chapter__lead" data-copy="capitulos.recuerdos.sub">Toca una flor y deja que se abra.</p>
+      </header>
+      <div class="chapter__body" id="recuerdos-body">
+        <div class="placeholder">
+          <svg class="placeholder__flor" aria-hidden="true"><use href="#flor"/></svg>
+          <p class="placeholder__title">Este capítulo se está escribiendo</p>
+          <p class="placeholder__text">Aquí va la galería: cada flor que se toca florece y revela una foto.</p>
+        </div>
+      </div>
+      <a class="view__next" href="#razones"><small>Siguiente capítulo</small>Razones</a>
+    </section>
+
+    <!-- CAPÍTULO 03 · RAZONES -->
+    <section class="view view--inner" data-view="razones" hidden aria-labelledby="t-razones">
+      <header class="chapter">
+        <p class="chapter__num" data-copy="capitulos.razones.num">Capítulo 03</p>
+        <h2 class="chapter__title" id="t-razones" data-copy="capitulos.razones.titulo">Razones</h2>
+        <p class="chapter__lead" data-copy="capitulos.razones.sub">Cosas que amo de ti, una por una.</p>
+      </header>
+      <div class="chapter__body" id="razones-body">
+        <div class="placeholder">
+          <svg class="placeholder__flor" aria-hidden="true"><use href="#flor"/></svg>
+          <p class="placeholder__title">Este capítulo se está escribiendo</p>
+          <p class="placeholder__text">Aquí se van a revelar las razones, una por una, con cada toque.</p>
+        </div>
+      </div>
+      <a class="view__next" href="#carta"><small>Siguiente capítulo</small>Carta para ti</a>
+    </section>
+
+    <!-- CAPÍTULO 04 · CARTA -->
+    <section class="view view--inner view--carta" data-view="carta" hidden aria-labelledby="t-carta">
+      <header class="chapter">
+        <p class="chapter__num" data-copy="capitulos.carta.num">Capítulo 04</p>
+        <h2 class="chapter__title" id="t-carta" data-copy="capitulos.carta.titulo">Carta para ti</h2>
+        <p class="chapter__lead" data-copy="capitulos.carta.sub">Sin distracciones. Solo lo que quiero decirte.</p>
+      </header>
+      <div class="chapter__body" id="carta-body">
+        <div class="placeholder">
+          <svg class="placeholder__flor" aria-hidden="true"><use href="#flor"/></svg>
+          <p class="placeholder__title">Este capítulo se está escribiendo</p>
+          <p class="placeholder__text">Aquí va la carta completa, el cierre del recorrido.</p>
+        </div>
+      </div>
+      <a class="view__next view__next--home" href="#inicio"><small>Volver al</small>Inicio</a>
+    </section>
+
+  </main>
+
+  <footer class="site-foot">
+    <span>Hecho con</span>
+    <svg class="site-foot__flor" aria-hidden="true"><use href="#flor"/></svg>
+    <span>para Joss</span>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/field.js"></script>
+  <script src="js/router.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
