@@ -25,21 +25,32 @@ window.SITE = {
   },
 
   /* Línea de tiempo (Capítulo 01). En orden cronológico.
-     { fecha: '2023-05-14', titulo: 'El primer café', frase: 'Una frase corta.', foto: 'assets/fotos/historia/01.jpg' }
-     ⚠ PENDIENTE DE REVISIÓN: las fechas, títulos y frases de abajo son
-       placeholders. Sustitúyelos por los reales antes de publicar. */
+     { fecha: '2023-05-14', titulo: 'El primer café', frase: 'Una frase corta.',
+       foto: 'assets/fotos/historia/01.jpg' }
+     - 'foto' admite una sola ruta; 'fotos' admite varias del mismo momento.
+     - { hoy: true } marca el último hito: muestra el contador en vivo
+       de los días juntos, contados desde 'inicio' (más abajo). */
   historia: [
     {
-      fecha: 'PENDIENTE — pon la fecha real',            // PENDIENTE
-      titulo: 'PENDIENTE — título del momento',           // PENDIENTE
-      frase: 'Un evento especial, los dos arreglados, con la escalinata de flores blancas de fondo.', // PENDIENTE (borrador)
-      foto: 'assets/fotos/historia/historia-01-evento-formal.jpg'
+      fecha: '2023-04-05',
+      titulo: 'Donde empezó todo',   // ← cámbialo por el nombre que tú le des
+      frase: ''
     },
     {
-      fecha: 'PENDIENTE — pon la fecha real',            // PENDIENTE
-      titulo: 'PENDIENTE — título del momento',           // PENDIENTE
-      frase: 'El mismo momento, un poco más de cerca.',   // PENDIENTE (borrador)
-      foto: 'assets/fotos/historia/historia-02-evento-formal-closeup.jpg'
+      fecha: '2023-04-28',
+      titulo: 'Nos hicimos novios',
+      frase: '',
+      // ⚠ Estas dos fotos son del mismo evento. Las puse aquí; si son
+      //   de otro día, muévelas al momento que les toque.
+      fotos: [
+        'assets/fotos/historia/historia-01-evento-formal.jpg',
+        'assets/fotos/historia/historia-02-evento-formal-closeup.jpg'
+      ]
+    },
+    {
+      hoy: true,
+      titulo: 'Hasta hoy',
+      frase: 'Y seguimos unidos a pesar de todo :3'
     }
   ],
 
@@ -78,6 +89,7 @@ window.SITE = {
     firma: ''
   },
 
-  /* Opcional: fecha de inicio para un contador en vivo (YYYY-MM-DD). */
-  inicio: null
+  /* Fecha de inicio del contador en vivo (YYYY-MM-DD): el 28 de abril,
+     el día que se hicieron novios. */
+  inicio: '2023-04-28'
 };

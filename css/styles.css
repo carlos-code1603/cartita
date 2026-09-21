@@ -482,6 +482,147 @@ body.is-ready .view--cover { --dm: .32; }
 }
 .view__next:hover::after { transform: translateX(8px); }
 
+/* ---------- Capítulo 01 · Nuestra historia: la línea de tiempo ---------- */
+
+.timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.moment {
+  position: relative;
+  padding: 0 0 clamp(34px, 6vh, 56px) clamp(42px, 6vw, 58px);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity .85s var(--ease), transform .85s var(--ease);
+}
+.moment.is-in { opacity: 1; transform: none; }
+.moment:last-child { padding-bottom: 0; }
+
+/* El tallo que une los momentos */
+.moment::before {
+  content: '';
+  position: absolute;
+  left: clamp(15px, 2.1vw, 21px);
+  top: 26px;
+  bottom: -6px;
+  width: 2px;
+  border-radius: 2px;
+  background: linear-gradient(180deg, var(--leaf), rgba(127, 176, 105, .25));
+}
+.moment:last-child::before { display: none; }
+
+.moment__node {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: grid;
+  place-items: center;
+  width: clamp(32px, 4.3vw, 44px);
+  height: clamp(32px, 4.3vw, 44px);
+  border-radius: 50%;
+  background: rgba(255, 248, 231, .9);
+  box-shadow: 0 0 0 1px rgba(255, 201, 60, .45), 0 8px 18px -10px rgba(59, 47, 47, .4);
+}
+.moment__flor {
+  width: 68%;
+  height: 68%;
+  animation: breathe 5s ease-in-out infinite;
+  animation-delay: calc(var(--i, 0) * -1.2s);
+}
+
+.moment__card {
+  padding-top: 2px;
+}
+.moment__date {
+  margin: 0 0 6px;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .24em;
+  text-transform: uppercase;
+  color: #A96A12;
+}
+.moment__title {
+  margin: 0 0 10px;
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: clamp(1.6rem, 3.6vw, 2.2rem);
+  line-height: 1.12;
+  color: var(--ink);
+}
+.moment__text {
+  margin: 0;
+  max-width: 54ch;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: clamp(1.1rem, 2.2vw, 1.3rem);
+  line-height: 1.5;
+  color: var(--ink-soft);
+}
+
+.moment__photos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 12px;
+  margin-top: 18px;
+  max-width: 560px;
+}
+.moment__photos--one { max-width: 380px; }
+.moment__photo {
+  display: block;
+  border-radius: 18px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #FFF3D0, #FFE4A3);
+  box-shadow: 0 24px 46px -30px rgba(59, 47, 47, .5);
+}
+.moment__photo img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity .6s ease;
+}
+.moment__photo img.is-loaded { opacity: 1; }
+
+/* El último hito: donde vive el contador */
+.moment--hoy .moment__node {
+  background: linear-gradient(135deg, var(--sun-2), var(--sun-3));
+  box-shadow: 0 0 0 1px rgba(255, 201, 60, .6), 0 0 0 7px rgba(255, 201, 60, .16);
+}
+
+.counter {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 12px;
+  margin: 4px 0 12px;
+}
+.counter__num {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: clamp(3rem, 11vw, 4.6rem);
+  line-height: .95;
+  color: #A96A12;
+  font-variant-numeric: tabular-nums;
+}
+.counter__label {
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+.counter__detail {
+  flex-basis: 100%;
+  margin-top: 2px;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: clamp(1.05rem, 2.1vw, 1.2rem);
+  color: var(--ink-soft);
+}
+
 /* ---------- Capítulo 02 · Recuerdos: el jardín que florece ---------- */
 
 .garden__bar {

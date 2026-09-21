@@ -10,6 +10,7 @@ css/styles.css    Sistema visual (paleta, tipografía, transiciones)
 js/data.js        ← TODO EL CONTENIDO (textos, momentos, fotos, razones, carta)
 js/field.js       Campo de flores animado (Canvas 2D)
 js/router.js      Rutas por hash (#inicio, #historia, #recuerdos, #razones, #carta)
+js/historia.js    Capítulo 01: línea de tiempo + contador de días juntos
 js/recuerdos.js   Capítulo 02: galería que florece + lightbox
 js/razones.js     Capítulo 03: razones (una sola o reveladas una por una)
 js/carta.js       Capítulo 04: la carta, párrafo por párrafo
