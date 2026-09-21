@@ -20,7 +20,7 @@ window.SITE = {
   capitulos: {
     historia:  { num: 'Capítulo 01', titulo: 'Nuestra historia', sub: 'Los momentos que nos trajeron hasta aquí, en orden, como los vivimos.' },
     recuerdos: { num: 'Capítulo 02', titulo: 'Recuerdos',        sub: 'Toca una flor y deja que se abra.' },
-    razones:   { num: 'Capítulo 03', titulo: 'Razones',          sub: 'Cosas que amo de ti, una por una.' },
+    razones:   { num: 'Capítulo 03', titulo: 'Razones',          sub: 'Lo que quiero que sepas.' },
     carta:     { num: 'Capítulo 04', titulo: 'Carta para ti',    sub: 'Sin distracciones. Solo lo que quiero decirte.' }
   },
 
@@ -60,13 +60,23 @@ window.SITE = {
     { foto: 'assets/fotos/recuerdos/recuerdo-10-beso-mejilla-filtro.jpg', pie: 'Otro beso, esta vez con el filtro de besos por toda la cara.' }              // PENDIENTE (borrador)
   ],
 
-  /* Razones (Capítulo 03). Una cadena por razón, se revelan una por una.
-     'Porque te ríes con los ojos.' */
-  razones: [],
+  /* Razones (Capítulo 03). Una cadena por razón.
+     Con una sola, se muestra centrada y en grande.
+     Con varias, se revelan una por una al tocar "Otra razón". */
+  razones: [
+    'La razón por la que hice esto es para que no te falte algo amarillo, ya que eres un girasol, mi vida — te regalo todos los girasoles del mundo :3'
+  ],
 
   /* Carta (Capítulo 04). Un párrafo por elemento del arreglo.
-     { saludo: 'Joss,', parrafos: ['...', '...'], firma: 'Con todo mi amor' } */
-  carta: { saludo: '', parrafos: [], firma: '' },
+     Si dejas 'firma' vacía, simplemente no se muestra. */
+  carta: {
+    saludo: 'Mi niña,',
+    parrafos: [
+      'Todo va a salir bien. Sí, te quiero y te amo, te adoro mucho, hermosa.',
+      'Vamos a echarle muchas ganas los dos, shi y vamos a salir adelante. Nunca te rindas, mi niña hermosa de mi alma :3'
+    ],
+    firma: ''
+  },
 
   /* Opcional: fecha de inicio para un contador en vivo (YYYY-MM-DD). */
   inicio: null

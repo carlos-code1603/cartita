@@ -11,6 +11,8 @@ js/data.js        ← TODO EL CONTENIDO (textos, momentos, fotos, razones, carta
 js/field.js       Campo de flores animado (Canvas 2D)
 js/router.js      Rutas por hash (#inicio, #historia, #recuerdos, #razones, #carta)
 js/recuerdos.js   Capítulo 02: galería que florece + lightbox
+js/razones.js     Capítulo 03: razones (una sola o reveladas una por una)
+js/carta.js       Capítulo 04: la carta, párrafo por párrafo
 js/main.js        Arranque, menú móvil, gestos de la portada
 assets/fotos/     historia/ y recuerdos/ (cada una con su subcarpeta mini/)
 tools/            optimizar-fotos.py
