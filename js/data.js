@@ -25,7 +25,7 @@ window.SITE = {
   },
 
   /* Línea de tiempo (Capítulo 01). En orden cronológico.
-     { fecha: '2023-05-14', titulo: 'El primer café', frase: 'Una frase corta.', foto: 'assets/fotos/historia/01.png' }
+     { fecha: '2023-05-14', titulo: 'El primer café', frase: 'Una frase corta.', foto: 'assets/fotos/historia/01.jpg' }
      ⚠ PENDIENTE DE REVISIÓN: las fechas, títulos y frases de abajo son
        placeholders. Sustitúyelos por los reales antes de publicar. */
   historia: [
@@ -33,31 +33,31 @@ window.SITE = {
       fecha: 'PENDIENTE — pon la fecha real',            // PENDIENTE
       titulo: 'PENDIENTE — título del momento',           // PENDIENTE
       frase: 'Un evento especial, los dos arreglados, con la escalinata de flores blancas de fondo.', // PENDIENTE (borrador)
-      foto: 'assets/fotos/historia/historia-01-evento-formal.png'
+      foto: 'assets/fotos/historia/historia-01-evento-formal.jpg'
     },
     {
       fecha: 'PENDIENTE — pon la fecha real',            // PENDIENTE
       titulo: 'PENDIENTE — título del momento',           // PENDIENTE
       frase: 'El mismo momento, un poco más de cerca.',   // PENDIENTE (borrador)
-      foto: 'assets/fotos/historia/historia-02-evento-formal-closeup.png'
+      foto: 'assets/fotos/historia/historia-02-evento-formal-closeup.jpg'
     }
   ],
 
   /* Galería (Capítulo 02). Cada flor revela una foto.
-     { foto: 'assets/fotos/recuerdos/10.png', pie: 'Texto opcional al pie' }
+     { foto: 'assets/fotos/recuerdos/10.jpg', pie: 'Texto opcional al pie' }
      ⚠ PENDIENTE DE REVISIÓN: los pies de foto son un borrador descriptivo,
        no los recuerdos reales. Cámbialos por lo que ustedes vivieron. */
   recuerdos: [
-    { foto: 'assets/fotos/recuerdos/recuerdo-01-selfie-gorro.png',        pie: 'Una foto muy de cerca, así de simple.' },                                    // PENDIENTE (borrador)
-    { foto: 'assets/fotos/recuerdos/recuerdo-02-cena-collar-girasol.png', pie: 'Una comida juntos, y ese dije de girasol que le queda perfecto al sitio.' }, // PENDIENTE (borrador)
-    { foto: 'assets/fotos/recuerdos/recuerdo-03-selfie-noche.png',        pie: 'Una noche cualquiera, haciendo caras.' },                                    // PENDIENTE (borrador)
-    { foto: 'assets/fotos/recuerdos/recuerdo-04-sofa-cerca.png',          pie: 'Un rato tranquilo, muy cerca.' },                                            // PENDIENTE (borrador)
-    { foto: 'assets/fotos/recuerdos/recuerdo-05-sofa-arriba.png',         pie: 'Otro rato tranquilo, vistos desde arriba.' },                                // PENDIENTE (borrador)
-    { foto: 'assets/fotos/recuerdos/recuerdo-06-perro-sala.png',          pie: 'En la sala, con el perro haciéndonos compañía.' },                           // PENDIENTE (borrador)
-    { foto: 'assets/fotos/recuerdos/recuerdo-07-filtro-perrito.png',      pie: 'Con el filtro de perrito, como siempre.' },                                  // PENDIENTE (borrador)
-    { foto: 'assets/fotos/recuerdos/recuerdo-08-selfie-arriba-abajo.png', pie: 'Una selfie chistosa, de cabeza.' },                                          // PENDIENTE (borrador)
-    { foto: 'assets/fotos/recuerdos/recuerdo-09-beso-mejilla-salon.png',  pie: 'Un beso en la mejilla, sin ocasión especial.' },                             // PENDIENTE (borrador)
-    { foto: 'assets/fotos/recuerdos/recuerdo-10-beso-mejilla-filtro.png', pie: 'Otro beso, esta vez con el filtro de besos por toda la cara.' }              // PENDIENTE (borrador)
+    { foto: 'assets/fotos/recuerdos/recuerdo-01-selfie-gorro.jpg',        pie: 'Una foto muy de cerca, así de simple.' },                                    // PENDIENTE (borrador)
+    { foto: 'assets/fotos/recuerdos/recuerdo-02-cena-collar-girasol.jpg', pie: 'Una comida juntos, y ese dije de girasol que le queda perfecto al sitio.' }, // PENDIENTE (borrador)
+    { foto: 'assets/fotos/recuerdos/recuerdo-03-selfie-noche.jpg',        pie: 'Una noche cualquiera, haciendo caras.' },                                    // PENDIENTE (borrador)
+    { foto: 'assets/fotos/recuerdos/recuerdo-04-sofa-cerca.jpg',          pie: 'Un rato tranquilo, muy cerca.' },                                            // PENDIENTE (borrador)
+    { foto: 'assets/fotos/recuerdos/recuerdo-05-sofa-arriba.jpg',         pie: 'Otro rato tranquilo, vistos desde arriba.' },                                // PENDIENTE (borrador)
+    { foto: 'assets/fotos/recuerdos/recuerdo-06-perro-sala.jpg',          pie: 'En la sala, con el perro haciéndonos compañía.' },                           // PENDIENTE (borrador)
+    { foto: 'assets/fotos/recuerdos/recuerdo-07-filtro-perrito.jpg',      pie: 'Con el filtro de perrito, como siempre.' },                                  // PENDIENTE (borrador)
+    { foto: 'assets/fotos/recuerdos/recuerdo-08-selfie-arriba-abajo.jpg', pie: 'Una selfie chistosa, de cabeza.' },                                          // PENDIENTE (borrador)
+    { foto: 'assets/fotos/recuerdos/recuerdo-09-beso-mejilla-salon.jpg',  pie: 'Un beso en la mejilla, sin ocasión especial.' },                             // PENDIENTE (borrador)
+    { foto: 'assets/fotos/recuerdos/recuerdo-10-beso-mejilla-filtro.jpg', pie: 'Otro beso, esta vez con el filtro de besos por toda la cara.' }              // PENDIENTE (borrador)
   ],
 
   /* Razones (Capítulo 03). Una cadena por razón, se revelan una por una.

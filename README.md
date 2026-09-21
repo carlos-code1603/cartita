@@ -10,9 +10,24 @@ css/styles.css    Sistema visual (paleta, tipografía, transiciones)
 js/data.js        ← TODO EL CONTENIDO (textos, momentos, fotos, razones, carta)
 js/field.js       Campo de flores animado (Canvas 2D)
 js/router.js      Rutas por hash (#inicio, #historia, #recuerdos, #razones, #carta)
+js/recuerdos.js   Capítulo 02: galería que florece + lightbox
 js/main.js        Arranque, menú móvil, gestos de la portada
-assets/fotos/     Aquí van las fotos
+assets/fotos/     historia/ y recuerdos/ (cada una con su subcarpeta mini/)
+tools/            optimizar-fotos.py
 ```
+
+## Agregar fotos
+
+1. Copia las fotos originales (PNG o JPG) en `assets/fotos/historia/` o `assets/fotos/recuerdos/`.
+2. Corre el optimizador (requiere `pip install pillow`):
+
+   ```
+   python3 tools/optimizar-fotos.py
+   ```
+
+   Convierte cada foto a JPEG de máximo 1600 px (para verla en grande) y genera
+   una miniatura de 640 px en `mini/` (para la cuadrícula). Borra el original PNG.
+3. Referencia la foto en `js/data.js` por su ruta `.jpg`. La miniatura se busca sola.
 
 ## Rutas
 
